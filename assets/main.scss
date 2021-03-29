@@ -1,76 +1,67 @@
-@import 'config';
-@import 'utilities';
-@import 'buttons';
-
+@import "config";
+@import "utilities";
+@import "buttons";
+@import "mobile";
 
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-    background-color: $light-color;
-    font-family: $font-stack;
-    line-height: 1.6;
-    
-    a {
-        text-decoration: none;
-    }
+  background-color: $light-color;
+  font-family: $font-stack;
+  line-height: 1.6;
+  height: 100vh;
 
-}
-
-
-header {
-    padding-left: 15px;
-    padding-right: 15px;
+  a {
+    text-decoration: none;
+  }
 }
 
 .showcase {
-    @include set-background($primary-color);
-    height: 600px;
-    
-    
-    nav {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        
-        ul {
-            display: flex;
-            list-style-type: none;
-        }
-        
-        li {
-            padding: 15px;
-        }
+  @include set-background($primary-color);
+  height: 100vh;
+  padding-left: 15px;
+  padding-right: 15px;
+  nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 
-        
-        a:hover {
-            color: $secondary-color;
-        }
+    ul {
+      display: flex;
+      list-style-type: none;
     }
 
-    a {
-        color: set-text-color($primary-color);
+    li {
+      padding: 15px;
     }
 
-    &-content {
+    a:hover {
+      color: $secondary-color;
+    }
+  }
+
+  a {
+    color: set-text-color($primary-color);
+  }
+
+  &-content {
     height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
     margin-top: 30px;
-    }
+  }
 
-    img {
-        width: 50%;
-    };
+  img {
+    width: 50%;
+  }
 
-    h1 {
-        font-size: 50px;
-        line-height: 1.2;
-    }
+  h1 {
+    font-size: 50px;
+    line-height: 1.2;
+  }
 }
-
-@import 'mobile';
